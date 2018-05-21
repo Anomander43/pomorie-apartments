@@ -18,7 +18,9 @@ const Footer = () => (
         <span>
           2018
         </span>
-        <div></div>
+        <p>
+          <span></span>
+        </p>
     </FooterStyle>
   )
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Hisotry = () => (
+const Coral = () => (
   <div>
     <h1>Hi from the third page</h1>
     <p>Welcome to page asdadasd3</p>
@@ -9,4 +9,4 @@ const Hisotry = () => (
   </div>
 )
 
-export default Hisotry;
+export default Coral;

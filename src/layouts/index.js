@@ -5,19 +5,26 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Header from '../components/Header'
+import IndexPage from '../pages/index'
 import Footer from '../components/Footer'
 import './index.css'
 
 
+const BodyStyle = styled.div`
+  background-color: #f1f1e6;
+  font-family: Open Sans;
+  font-size: 16px;
+  line-height: 24px;
+  color: #616156;
 
-const FooterStyle = styled.div`
-  width: 1200px;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0,
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
 `
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <BodyStyle>
     <Helmet
       title="Pomorie Apartments"
       meta={[
@@ -25,17 +32,11 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
-    <div
-      style={{
-        
-      }}
-    >
-      {children()}
-    </div>
 
+    <Header />
+    {children()}
     <Footer />
-  </div>
+  </BodyStyle>
 )
 
 TemplateWrapper.propTypes = {

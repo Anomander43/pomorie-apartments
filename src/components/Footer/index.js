@@ -2,25 +2,35 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-const FooterStyle = styled.div`
-  width: 1200px;
+const FooterStyle = styled.footer`
   margin: 0 auto;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0,
+  background: #fff;
+
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+
+    .year-mark {
+      float: right;
+    }
+  }
 
   a {
     text-decoration: none;
   }
 `
 
+const FooterBlock = styled.div`
+  width: 1170px;
+`
+
 const Footer = () => (
     <FooterStyle>
-        <span>
-          2018
+      <FooterBlock className="container">
+        <span className="year-mark">
+          © 2018
         </span>
-        <p>
-          <span></span>
-        </p>
+      </FooterBlock>
     </FooterStyle>
   )
 

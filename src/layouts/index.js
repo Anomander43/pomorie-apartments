@@ -12,7 +12,7 @@ import './index.css'
 
 const BodyStyle = styled.div`
   background-color: #f1f1e6;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 16px;
   line-height: 24px;
   color: #616156;
@@ -31,7 +31,10 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-    />
+      
+    >
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    </Helmet>
 
     <Header />
     {children()}

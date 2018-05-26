@@ -23,6 +23,7 @@ const FactsStyle = styled.div`
     font-size: 16px;
     line-height: 24px;
     color: #616156;
+    text-align: justify;
   }
 `
 
@@ -30,9 +31,9 @@ const Fact9 = () => (
   <FactsStyle>
     <h2>Protected countryside nearby Pomorie</h2>
     <p>
-       Not far away from the river is the protected countryside, called Chairite. This is the home of the marsh snowdrop. It gives the extract for the medicine “Nivalin” – extremely effective in curing infantile paralysis.
-       Three kilometers up in the mountain the ancient fortress wall, called Kaleto, is situated. It’s very well saved and it’s declared as an architectural record. The landmark, called Dobrovan Mushrooms is located in the same area. These are natural rock establishments.
-       The protected territory, called Koriyata – a dense forest of beech and elm, is the area of the neighboring village of Gababetz.
+    Not far away from the river is the protected countryside, called Chairite. This is the home of the marsh snowdrop. It gives the extract for the medicine “Nivalin” – extremely effective in curing infantile paralysis.
+    Three kilometers up in the mountain the ancient fortress wall, called Kaleto, is situated. It’s very well saved and it’s declared as an architectural record. The landmark, called Dobrovan Mushrooms is located in the same area. These are natural rock establishments.
+    The protected territory, called Koriyata – a dense forest of beech and elm, is the area of the neighboring village of Gababetz.
     </p>
   </FactsStyle>
 )

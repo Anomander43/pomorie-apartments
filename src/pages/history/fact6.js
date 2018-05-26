@@ -23,6 +23,7 @@ const FactsStyle = styled.div`
     font-size: 16px;
     line-height: 24px;
     color: #616156;
+    text-align: justify;
   }
 `
 
@@ -30,7 +31,7 @@ const Fact6 = () => (
   <FactsStyle>
     <h2>The church of Holy Transfiguration of Our Lord</h2>
     <p>
-      The Holy Transfiguration of Our Lord church is the oldest building in the architectural reserve of Old Pomorie Houses. It had been built in 1763 – 1764 and was finished and sanctified in 1765. A holy spring with water coming from a stone plate as located below the King’s icon of Jesus Christ. It was called “The Tears of Jeesus”.
+        The Holy Transfiguration of Our Lord church is the oldest building in the architectural reserve of Old Pomorie Houses. It had been built in 1763 – 1764 and was finished and sanctified in 1765. A holy spring with water coming from a stone plate as located below the King’s icon of Jesus Christ. It was called “The Tears of Jeesus”.
     </p>
   </FactsStyle>
 )

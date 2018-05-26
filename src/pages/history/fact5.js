@@ -23,6 +23,7 @@ const FactsStyle = styled.div`
     font-size: 16px;
     line-height: 24px;
     color: #616156;
+    text-align: justify;
   }
 `
 

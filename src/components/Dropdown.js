@@ -1,6 +1,7 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
+import React, { Component } from 'react'
+import Link from "gatsby-link"
+import styled from "styled-components"
+import $ from "jquery"
 
 import corner from "../images/menu_corner.png";
 
@@ -11,8 +12,10 @@ const NavStyle = styled.nav`
         display: inline-block;
     }
 
-    .dropdown:hover .dropdown-content {
+    .dropdown-content:hover a {
+        /* opacity: 1; */
         display: block;
+        /* transition: all .5s; */
     }
     
     a {
@@ -33,6 +36,8 @@ const NavStyle = styled.nav`
 
     .dropdown-content {
         display: none;
+        /* opacity: 0; */
+        transition: all .5s 3s;
         margin-top: 31px;
         position: absolute;
         background-color: #f9f9f9;
@@ -75,22 +80,42 @@ const NavStyle = styled.nav`
     }
 `;
 
-const Dropdown = () => (
-    <NavStyle>
-        <Link activeClassName="active" className="" exact to="/">Home</Link>
-        <div className="dropdown">
-            <Link activeClassName="active" exact to="/apartments">Apartments</Link>
-            <div className="dropdown-content">
-            <Link to="/classic">Classic</Link>
-            <Link to="/comfort">Comfort</Link>
-            <Link to="/coral">Coral</Link>
+export default class Dropdown extends Component {
+    constructor() {
+        super();
+    }
+
+    toggleShow = () => {
+        // $( ".dropdown" ).mouseover(function() {
+            // clearTimeout($(this).data('timeoutId'));
+            $('.dropdown-content').show();
+    }
+
+    toggleHide = () => {
+        setTimeout(function(){
+            $('.dropdown-content').hide('slow', function(){
+            });// or fade, css display however you'd like.
+        }, 3000); // set visible time
+    }
+
+  render() {
+    return (
+        <NavStyle>
+            <Link activeClassName="active" className="" exact to="/">Home</Link>
+            <div className="dropdown" onMouseEnter={this.toggleShow}>
+                <Link activeClassName="active" exact to="/apartments">Apartments</Link>
+                <div className="dropdown-content" onMouseEnter={this.toggleShow} onMouseLeave={this.toggleHide} >
+                <Link to="/classic">Classic</Link>
+                <Link to="/comfort">Comfort</Link>
+                <Link to="/coral">Coral</Link>
+                <Link to="/marina">Marina</Link>
+                </div>
             </div>
-        </div>
 
-        <Link activeClassName="active" exact to="prices">Prices</Link>
-        <Link activeClassName="active" exact to="history">History</Link>
-        <Link activeClassName="active" exact to="contacts">Contacts</Link>
-    </NavStyle>
-);
-
-export default Dropdown;
+            <Link activeClassName="active" exact to="prices">Prices</Link>
+            <Link activeClassName="active" exact to="history">History</Link>
+            <Link activeClassName="active" exact to="contacts">Contacts</Link>
+        </NavStyle>
+    )
+  }
+}

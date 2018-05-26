@@ -14,6 +14,10 @@ const HistoryStyle = styled.div`
     color: #584a3e;
     font-weight: 300 !important;
   }
+  
+  p {
+    text-align: justify;
+  }
 
   ul {
     margin: 0;

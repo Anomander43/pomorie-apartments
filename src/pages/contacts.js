@@ -26,7 +26,13 @@ const MapContainer = styled.div`
 const ContactInfo = styled.div`
   display: inline-block;
   width: 30%;
+  padding-right: 25px;
   vertical-align: top;
+
+  p {
+    text-align: justify;
+  }
+
   address {
     display: block;
     margin-bottom: 24px;
@@ -201,6 +207,9 @@ export default class About extends Component {
         </MapContainer>
         <ContactInfo>
           <h2>Contact Info</h2>
+          <p>
+          Please write us an email and specify the period you’d like to book the apartment for and we’ll get back to you. After our confirmation via email or phone, you’ll have to pay a reservation fee equal to three nights via bank account, Western Union or Money Gram.
+          </p>
           <address>
           Contact Person: Maria Yaneva
           <br/>

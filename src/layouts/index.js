@@ -8,6 +8,7 @@ import Header from '../components/Header'
 import IndexPage from '../pages/index'
 import Footer from '../components/Footer'
 import './index.css'
+import icon32 from '../icon32.png'
 
 
 const BodyStyle = styled.div`
@@ -31,8 +32,8 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-      
     >
+      <link rel="shortcut icon" href={icon32} />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     </Helmet>
 

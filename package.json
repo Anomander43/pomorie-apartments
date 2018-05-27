@@ -11,6 +11,7 @@
     "jquery": "^3.3.1",
     "nuka-carousel": "^4.2.1",
     "react-google-maps": "^9.4.5",
+    "react-image-gallery": "^0.8.7",
     "styled-components": "^3.2.6"
   },
   "keywords": [

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel';
-import ApartmentDescription from '../components/ApartmentDescription'
+import ApartmentSmall from '../components/ApartmentSmall'
 
 import img1 from "../images/carousel/1.jpg";
 import img2 from "../images/carousel/2.jpg";
@@ -12,6 +12,7 @@ import img5 from "../images/carousel/5.jpg";
 import classicThumb from "../images/thumbnails/classic_thumb.jpg";
 import comfortThumb from "../images/thumbnails/comfort_thumb.jpg";
 import coralThumb from "../images/thumbnails/coral_thumbnail.jpg";
+import marinaThumb from "../images/thumbnails/marina_thumbnail.jpg";
 
 const MainContent = styled.div`
   width: 1170px;
@@ -38,9 +39,10 @@ const IndexPage = () => (
     </Carousel>
 
     <ApartmentDescriptionHolder>
-      <ApartmentDescription apartmentName="Classic" descriptionText="dummy" thumbImg={classicThumb} />
-      <ApartmentDescription apartmentName="Comfort" descriptionText="dummy" thumbImg={comfortThumb} />
-      <ApartmentDescription apartmentName="Coral" descriptionText="dummy" thumbImg={coralThumb} />
+      <ApartmentSmall apartmentName="Classic" descriptionText="dummy" thumbImg={classicThumb} />
+      <ApartmentSmall apartmentName="Comfort" descriptionText="dummy" thumbImg={comfortThumb} />
+      <ApartmentSmall apartmentName="Coral" descriptionText="dummy" thumbImg={coralThumb} />
+      <ApartmentSmall apartmentName="Marina" descriptionText="dummy" thumbImg={marinaThumb} />
     </ApartmentDescriptionHolder>
   </MainContent>
 )

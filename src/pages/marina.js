@@ -51,7 +51,8 @@ import thumbnailImage22 from '../images/apartment-marina/thumbnails/22.jpg'
 
 
 const ApartmentsStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 

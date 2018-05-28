@@ -5,6 +5,8 @@ import logo from "../../images/logo_small.jpg";
 import header from "../../images/header.jpg";
 import Dropdown from "../Dropdown";
 
+import { media } from '../../layouts/style-utils';
+
 const HeaderStyle = styled.header`
   margin: 0 auto;
   //padding: 0px 1.0875rem 1.45rem;
@@ -46,15 +48,24 @@ const HeaderStyle = styled.header`
       color: #6B5F53;
     }
   }
-`;
+
+  ${media.ereader`
+    padding: 20px 20px 0 20px;
+  `}
+`
 
 const HeaderBlock = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   text-align: center;
   background: #fff;
   padding: 97px 0 43px 0;
   border-top: 5px solid #bce623;
+
+  ${media.ereader`
+    padding: 20px 0;
+  `}
 `
 
 const Header = () => (

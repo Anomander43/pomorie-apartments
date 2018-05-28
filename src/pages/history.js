@@ -2,8 +2,11 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import { media } from '../layouts/style-utils';
+
 const HistoryStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 
@@ -57,6 +60,10 @@ const HistoryStyle = styled.div`
       }
     }
   }
+
+  ${media.ereader`
+    padding: 0 20px;
+  `}
 `
 
 const History = () => (

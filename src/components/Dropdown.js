@@ -3,11 +3,12 @@ import Link from "gatsby-link"
 import styled from "styled-components"
 import $ from "jquery"
 
+import { media } from '../layouts/style-utils';
 import corner from "../images/menu_corner.png";
 
 const NavStyle = styled.nav`
-
     padding: 20px 0;
+
     .dropdown {
         display: inline-block;
     }
@@ -44,7 +45,7 @@ const NavStyle = styled.nav`
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
-        background: #a39b8d;
+        background-color: #a39b8d;
 
         &:before {
             background: url(${corner}) no-repeat 0% 0%;
@@ -78,7 +79,25 @@ const NavStyle = styled.nav`
             }
         }
     }
-`;
+
+    ${media.ereader`
+        margin-top: 20px;
+
+            a, .dropdown {
+                text-decoration: none;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                background-color: #a39b8d;
+                color: white;
+            }
+
+            .dropdown {
+                margin-bottom: 1px;
+            }
+    `}
+`
 
 export default class Dropdown extends Component {
     constructor() {

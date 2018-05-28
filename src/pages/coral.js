@@ -58,7 +58,8 @@ import thumbnailImage25 from '../images/apartment-coral/thumbnails/25.jpg'
 import thumbnailImage26 from '../images/apartment-coral/thumbnails/26.jpg'
 
 const ApartmentsStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 

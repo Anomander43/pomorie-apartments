@@ -9,6 +9,8 @@ import IndexPage from '../pages/index'
 import Footer from '../components/Footer'
 import './index.css'
 import icon32 from '../icon32.png'
+// import { media } from './style-utils';
+
 
 
 const BodyStyle = styled.div`
@@ -19,7 +21,8 @@ const BodyStyle = styled.div`
   color: #616156;
 
   .container {
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%
     margin: 0 auto;
   }
 `
@@ -31,6 +34,7 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1'}
       ]}
     >
       <link rel="shortcut icon" href={icon32} />

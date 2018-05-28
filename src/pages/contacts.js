@@ -5,9 +5,11 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 
 const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
 import Form from '../components/Form/Form';
+import { media } from '../layouts/style-utils';
 
 const ContactsStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 
@@ -18,6 +20,11 @@ const ContactsStyle = styled.div`
     font-size: 45px;
     color: #584a3e;
   }
+
+  ${media.ereader`
+    padding-left: 20px;
+    padding-right: 20px;
+  `}
 `
 const MapContainer = styled.div`
   padding-top: 40px;
@@ -45,6 +52,11 @@ const ContactInfo = styled.div`
       text-decoration: none;
     }
   }
+
+  ${media.ereader`
+    display: block;
+    width: 100%;
+  `}
 `
 const ContactFormHolder = styled.div`
   display: inline-block;
@@ -150,6 +162,11 @@ const ContactFormHolder = styled.div`
     text-align: center;
     width: 120px;
   }
+
+  ${media.ereader`
+    display: block;
+    width: 100%;
+  `}
 `
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>

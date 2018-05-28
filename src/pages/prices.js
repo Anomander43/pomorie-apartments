@@ -2,8 +2,11 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import { media } from '../layouts/style-utils';
+
 const PriceStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 
@@ -85,6 +88,16 @@ const PriceStyle = styled.div`
       }
     }
   }
+
+  ${media.ereader`
+    table {
+      font-size: 14px;
+
+      tbody tr td {
+        padding: 5px;
+      }
+    }
+  `}
 `
 
 
@@ -94,10 +107,10 @@ const Prices = () => (
                 <thead>
                     <tr>
                         <th></th>
-                        <th scope="col" abbr="Classic">Classic</th>
-                        <th scope="col" abbr="Comfort">Comfort</th>
-                        <th scope="col" abbr="Coral">Coral</th>
-                        <th scope="col" abbr="Marina">Marina</th>
+                        <th scope="col">Classic</th>
+                        <th scope="col">Comfort</th>
+                        <th scope="col">Coral</th>
+                        <th scope="col">Marina</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -62,7 +62,8 @@ import thumbnailImage27 from '../images/apartment-comfort/thumbnails/27.jpg'
 import thumbnailImage28 from '../images/apartment-comfort/thumbnails/28.jpg'
 
 const ApartmentsStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 

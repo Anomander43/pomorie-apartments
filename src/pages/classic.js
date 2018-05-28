@@ -42,7 +42,8 @@ import thumbnailImage17 from '../images/apartment-classic/thumbnails/17.jpg'
 import thumbnailImage18 from '../images/apartment-classic/thumbnails/18.jpg'
 
 const ApartmentsStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 

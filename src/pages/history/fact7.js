@@ -2,8 +2,11 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
+import { media } from '../../layouts/style-utils';
+
 const FactsStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 
@@ -25,6 +28,10 @@ const FactsStyle = styled.div`
     color: #616156;
     text-align: justify;
   }
+
+  ${media.ereader`
+    padding: 0 20px;
+  `}
 `
 
 const Fact7 = () => (

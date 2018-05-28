@@ -15,7 +15,8 @@ import coralThumb from "../images/thumbnails/coral_thumbnail.jpg";
 import marinaThumb from "../images/thumbnails/marina_thumbnail.jpg";
 
 const MainContent = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
 

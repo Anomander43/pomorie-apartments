@@ -3,15 +3,23 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import ApartmentMedium from '../components/ApartmentMedium'
 
+import { media } from '../layouts/style-utils';
+
 import classicThumb from "../images/thumbnails/classic_medium.jpg";
 import comfortThumb from "../images/thumbnails/comfort_medium.jpg";
 import coralThumb from "../images/thumbnails/coral_medium.jpg";
 import marinaThumb from "../images/thumbnails/marina_medium.jpg";
 
 const ApartmentsStyle = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
   margin: 0 auto;
   padding-bottom: 65px;
+
+  ${media.ereader`
+    padding-left: 20px;
+    padding-right: 20px;
+  `}
 `
 
 const Apartments = () => (

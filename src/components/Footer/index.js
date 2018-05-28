@@ -7,7 +7,8 @@ const FooterStyle = styled.footer`
   background: #fff;
 
   .container {
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%
     margin: 0 auto;
 
     .year-mark {
@@ -21,7 +22,8 @@ const FooterStyle = styled.footer`
 `
 
 const FooterBlock = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%
 `
 
 const Footer = () => (

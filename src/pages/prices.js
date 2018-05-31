@@ -10,6 +10,20 @@ const PriceStyle = styled.div`
   margin: 0 auto;
   padding-bottom: 65px;
 
+  h2 {
+        margin-top: 60px;
+        margin-bottom: 30px;
+        color: #584a3e;
+        font-size: 45px;
+        transition: 0.8s;
+        outline: none;
+        font-weight: 300 !important;
+    }
+
+  ul {
+    margin-bottom: 0;
+  }
+
   table {
     margin-top: 25px;
     border-bottom: 2px solid black;
@@ -103,6 +117,29 @@ const PriceStyle = styled.div`
 
 const Prices = () => (
   <PriceStyle>
+    <div>
+      <h2>General conditions of all our apartments</h2>
+      <ul>
+        <li><strong>THE GUEST MUST INFORM ABOUT THE TIME OF THEIR ARRIVAL BY E-MAIL OR TELEPHONE TO ARRANGE THE CHECK-IN IN THE APARTMENT.</strong></li>
+        <li><strong>Check-in starts from 14:00.</strong></li>
+        <li><strong>Check-out time is 11:30.</strong></li>
+        <li>Once you have carried out the payment of the reservation fee you will receive an e-mail with the confirmation and all the information.</li>
+        <li>Please contact us 3 days before your arrival to confirm the meeting time and place of arrival.</li>
+        <li>You must give back all sets of keys on departure. In case you lose the keys to the apartment, there’s a penalty of 50 euro in order to change the lock.</li>
+        <li>You must leave the apartment at the pointed check out time.</li>
+        <li>No damaging the apartments furniture or facilities.</li>
+        <li>No allowed lodging of more people than the maximum number specified for the apartment.</li>
+        <li>Loud noise is forbidden after 21.00h inside the apartment and also in the staircase. Please do not disturb the neighbours when opening or closing the entrance to the building and the apartment. This point is particularly important and no concessions will be made. If the police contact us due to trouble in the apartment, the agreement will be terminated and the rent won’t be returned.</li>
+        <li>We do not accept reservations of people who rent the apartments for illegal activities.</li>
+        <li>We will not be liable for the possible theft of objects or money deposited in the apartment.</li>
+      </ul>
+      <h2>Cancellation policy</h2>
+        When a reservation is cancelled due to causes that are attributable to the client, the amount paid as a reservation fee will not be refunded.<br/>
+        Cancellations must be communicated either in writing or by e-mail.<br/>
+        In the event the apartment is not available due to circumstances beyond our control, we will offer you accommodation with identical characteristics. If we are unable to offer alternative accommodation, the reservation will be cancelled and a refund of your booking fee will be made.
+      </div>
+
+    <h2>Prices</h2>
     <table className="priceTable">
                 <thead>
                     <tr>

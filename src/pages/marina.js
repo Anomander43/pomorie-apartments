@@ -100,6 +100,24 @@ const ApartmentsStyle = styled.div`
   p.baby-cot {
     margin: 15px 0;
   }
+
+  .image-gallery-image {
+      text-align: center;
+      background-color: #f1f1e6;
+  }
+  .image-gallery-slide img {
+      width: auto;
+  }
+
+  .image-gallery-thumbnails-container {
+    .image-gallery-thumbnail {
+        width: auto;
+    }
+    
+    img {
+        margin-bottom: 0;
+    }
+  }
 `
 
 

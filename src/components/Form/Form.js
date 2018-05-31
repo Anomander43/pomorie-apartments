@@ -24,35 +24,36 @@ class Form extends Component {
 
   render() {
     return (
-      <div>
-        {/* Name field */}
+      <form 
+        action="https://formspree.io/anomander43+formspree@gmail.com"
+        name="contact" 
+        method="post">
         <input 
-          type='text'
-          aria-required='true'
-          aria-invalid='false'
+          name="name"
+          type="text"
+          aria-required="true"
+          aria-invalid="false"
           placeholder="Name:"
         />
-        
-        {/* Email field */}
         <input 
-          type='email'
-          aria-required='true'
-          aria-invalid='false'
+          name="email"
+          type="email"
+          aria-required="true"
+          aria-invalid="false"
           placeholder="E-mail:"
         />
-        {/* Message textarea */}
         <textarea
-        aria-invalid='false'
-        placeholder="Message:">
+          aria-invalid="false"
+          name="message"
+          placeholder="Message:">
         </textarea>
 
-        {/* Submit button */}
-        <input type='submit' value='send' className='submitButton' />
+        <input type="submit" value="send" className="submitButton" />
         {/* <Button
           email="anomander43@gmail.com"
           formValues={this.state}
         /> */}
-      </div>
+      </form>
     );
   }
 }

@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import { media } from '../layouts/style-utils';
+import pomorieImg from '../images/pomorie.jpg'
 
 const HistoryStyle = styled.div`
   max-width: 1170px;
@@ -69,6 +70,7 @@ const HistoryStyle = styled.div`
 const History = () => (
   <HistoryStyle>
     <h2>Pomorie</h2>
+    <img src={pomorieImg} />
     <p>Situated on a picturesque peninsula, this piece of the world unites the past and the future by the coexistence of the unique historical and cultural records.
       The specific natural surroundings have turned this place into a preferred destination for rest and cure a long time ago.
       Pomorie’s climate and the balneological centre set terms for a long season along with an year-round health tourism.

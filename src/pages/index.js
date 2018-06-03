@@ -26,6 +26,8 @@ const MainContent = styled.div`
 `
 const ApartmentDescriptionHolder = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
   justify-content: space-between;
 `
 
@@ -40,10 +42,10 @@ const IndexPage = () => (
     </Carousel>
 
     <ApartmentDescriptionHolder>
-      <ApartmentSmall apartmentName="Classic" descriptionText="dummy" thumbImg={classicThumb} />
-      <ApartmentSmall apartmentName="Comfort" descriptionText="dummy" thumbImg={comfortThumb} />
-      <ApartmentSmall apartmentName="Coral" descriptionText="dummy" thumbImg={coralThumb} />
-      <ApartmentSmall apartmentName="Marina" descriptionText="dummy" thumbImg={marinaThumb} />
+      <ApartmentSmall apartmentName="Classic" thumbImg={classicThumb} />
+      <ApartmentSmall apartmentName="Comfort" thumbImg={comfortThumb} />
+      <ApartmentSmall apartmentName="Coral" thumbImg={coralThumb} />
+      <ApartmentSmall apartmentName="Marina" thumbImg={marinaThumb} />
     </ApartmentDescriptionHolder>
   </MainContent>
 )

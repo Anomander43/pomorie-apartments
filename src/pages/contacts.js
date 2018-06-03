@@ -228,13 +228,13 @@ export default class About extends Component {
           Please write us an email and specify the period you’d like to book the apartment for and we’ll get back to you. After our confirmation via email or phone, you’ll have to pay a reservation fee equal to three nights via bank account, Western Union or Money Gram.
           </p>
           <address>
-          Contact Person: Maria Yaneva
+          Contact Person: Mariya Yaneva
           <br/>
           Telephone: +359 889 555 063
           <br/>
           Telephone: +359 899 79 78 79
           <br/>
-          E-mail: <a href="mailto:nedko.g.georgiev@gmail.com">nedko.g.georgiev@gmail.com</a>
+          E-mail: <a href="mailto:mariyag43@abv.bg">mariyag43@abv.bg</a>
           </address>
         </ContactInfo>
         <ContactFormHolder>

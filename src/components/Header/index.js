@@ -71,7 +71,7 @@ const HeaderBlock = styled.div`
 const Header = () => (
   <HeaderStyle>
     <HeaderBlock>
-      <img src={logo} className="logo" />
+      <Link to="/"><img src={logo} className="logo" /></Link>
       <h1 style={{ margin: 0 }} className="main-header">
         <Link to="/">Pomorie Apartments</Link>
       </h1>

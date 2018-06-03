@@ -6,11 +6,17 @@ import corner from "../images/menu_corner.png";
 
 const Description = styled.div`
     display: inline-block;
-    width: 370px;
+    margin: 0 15px 30px;
+    width: calc(100% * (1/3) - 30px);
     background-color: white;
 
     figure {
         text-align: center;
+
+        img {
+            margin: 0;
+            /* width: 100%; */
+        }
     }
 
     h5, p {
@@ -21,6 +27,8 @@ const Description = styled.div`
         text-decoration: none;
         color: #d2c970;
         font-size: 30px
+        transition: 0.8s;
+        font-weight: 400;
 
         &:hover {
             color: #aacc2f;
@@ -40,9 +48,6 @@ const ApartmentSmall = (props) => (
                 {props.apartmentName}
             </Link>
         </h5>
-        <p>
-            {props.descriptionText}
-        </p>
     </Description>
 );
 

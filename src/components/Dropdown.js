@@ -4,7 +4,8 @@ import styled from "styled-components"
 import $ from "jquery"
 
 import { media } from '../layouts/style-utils';
-import corner from "../images/menu_corner.png";
+import menu_corner from "../images/menu_corner.png";
+import menu_line from "../images/menu_line.png";
 
 const NavStyle = styled.nav`
     padding: 20px 0;
@@ -18,7 +19,7 @@ const NavStyle = styled.nav`
         display: block;
         /* transition: all .5s; */
     }
-    
+
     a {
         text-decoration: none;
         margin: 0 33px;
@@ -36,19 +37,38 @@ const NavStyle = styled.nav`
     }
 
     .dropdown-content {
-        display: none;
+        /* display: none; */
         /* opacity: 0; */
-        transition: all .5s 3s;
-        margin-top: 31px;
-        position: absolute;
+        margin: 5px 0 0;
+
         background-color: #f9f9f9;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
-        background-color: #a39b8d;
+        position: absolute;
+        cursor: pointer;
+        display: none;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 12px 20px;
+            background-color: #a39b8d;
+        }
+
+        li {
+            background: url(${menu_line}) repeat-x 0% 0%;
+            margin: 0;
+            padding: 1px 0;
+
+            &:first-child {
+                background: none;
+            }
+        }
+
 
         &:before {
-            background: url(${corner}) no-repeat 0% 0%;
+            background: url(${menu_corner}) no-repeat 0% 0%;
             display: block;
             width: 14px;
             height: 7px;
@@ -61,7 +81,7 @@ const NavStyle = styled.nav`
         }
 
         a {
-            padding: 8px 0 7px 0;
+            background-color: #a39b8d;
             border: none;
             line-height: 20px;
             font-size: 14px;
@@ -69,10 +89,11 @@ const NavStyle = styled.nav`
             text-decoration: none;
             color: #ffffff;
             float: none;
-            padding: 12px 16px;
+            padding: 8px 29px 7px;
             text-decoration: none;
             display: block;
             text-align: left;
+            margin: 0;
 
             &:hover {
                 color: #fdffcd;
@@ -107,27 +128,32 @@ export default class Dropdown extends Component {
     toggleShow = () => {
         // $( ".dropdown" ).mouseover(function() {
             // clearTimeout($(this).data('timeoutId'));
-            $('.dropdown-content').show();
+            // $('.dropdown-content').show();
+            $('.dropdown-content').slideDown();
     }
 
     toggleHide = () => {
-        setTimeout(function(){
-            $('.dropdown-content').hide('slow', function(){
-            });// or fade, css display however you'd like.
-        }, 3000); // set visible time
+        $('.dropdown-content').slideUp();    
+        
+        // setTimeout(function(){
+        //     $('.dropdown-content').hide('slow', function(){
+        //     });// or fade, css display however you'd like.
+        // }, 3000); // set visible time
     }
 
   render() {
     return (
         <NavStyle>
             <Link activeClassName="active" className="" exact to="/">Home</Link>
-            <div className="dropdown" onMouseEnter={this.toggleShow}>
-                <Link activeClassName="active" exact to="/apartments">Apartments</Link>
-                <div className="dropdown-content" onMouseEnter={this.toggleShow} onMouseLeave={this.toggleHide} >
-                <Link to="/classic">Classic</Link>
-                <Link to="/comfort">Comfort</Link>
-                <Link to="/coral">Coral</Link>
-                <Link to="/marina">Marina</Link>
+            <div className="dropdown" onMouseEnter={this.toggleShow} onMouseLeave={this.toggleHide}>
+            <Link activeClassName="active" exact to="/apartments">Apartments</Link>
+                <div className="dropdown-content">
+                <ul>
+                    <li><Link to="/classic">Classic</Link></li>
+                    <li><Link to="/comfort">Comfort</Link></li>
+                    <li><Link to="/coral">Coral</Link></li>
+                    <li><Link to="/marina">Marina</Link></li>
+                </ul>
                 </div>
             </div>
 

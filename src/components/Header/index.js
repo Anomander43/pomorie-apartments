@@ -4,6 +4,7 @@ import styled from "styled-components";
 import logo from "../../images/logo_small.jpg";
 import header from "../../images/header.jpg";
 import Dropdown from "../Dropdown";
+import SelectLanguage from '../SelectLanguage';
 
 import { media } from '../../layouts/style-utils';
 
@@ -68,7 +69,7 @@ const HeaderBlock = styled.div`
   `}
 `
 
-const Header = () => (
+const Header = (props) => (
   <HeaderStyle>
     <HeaderBlock>
       <Link to="/"><img src={logo} className="logo" /></Link>
@@ -76,6 +77,7 @@ const Header = () => (
         <Link to="/">Pomorie Apartments</Link>
       </h1>
       <Dropdown />
+      <SelectLanguage langs={props.langs} />
     </HeaderBlock>
   </HeaderStyle>
 );

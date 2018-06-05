@@ -218,18 +218,18 @@ const Marina = () => (
 
     <ImageGallery items={images} />
 
-    <p>Apartment Marina is situated on the most attractive beach of Pomorie town - in the Old town, exactly on Kraibrejna Street, really close to many restaurants and only 5 minutes away from the bus station and the Building of the Municipality. The apartment is on the 3rd floor, which supposed a great view from every room to the sea and beaches. It’s a modern furnished apartment for 4-7 people with two rooms, furnished kitchen, bathroom with WC. The apartment has air conditioner in the dinning room, laundry, microwave oven, refrigerator, cooker, hot water jug, iron, TV, a terrace and free Wi-Fi.
+    <p>Apartment Marina is situated on the most attractive beach of Pomorie town - in the Old town, exactly on Kraibrejna Street, really close to many restaurants and only 5 minutes away from the bus station and the Building of the Municipality. The apartment is on the 3rd floor, which supposed a great view from every room to the sea and beaches. It’s a modern furnished apartment for 4-7 people with two rooms, furnished kitchen, bathroom with WC.
     </p>
 
     <ul className="available-items">
         <li>air conditioner in the dining room</li>
-        <li>laundry</li>
+        <li>washing machine</li>
         <li>microwave oven</li>
         <li>refrigerator</li>
         <li>cooker</li>
-        <li>hot pot jug</li>
+        <li>electric kettle</li>
         <li>iron</li>
-        <li>TV in each room</li>
+        <li>TV</li>
         <li>free Wi-Fi</li>
     </ul>
     <p className="baby-cot">On a request we can provide baby cot and baby high chair, subject to availability at the time.</p>

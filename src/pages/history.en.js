@@ -77,16 +77,16 @@ const History = () => (
     </p>
 
     <ul>
-      <li><Link exact to="history/fact1">History</Link></li>
-      <li><Link exact to="history/fact2">Pomorie Salt Lake</Link></li>
-      <li><Link exact to="history/fact3">Pomorie Museum of Salt</Link></li>
-      <li><Link exact to="history/fact4">History Museum</Link></li>
-      <li><Link exact to="history/fact5">The Ancient Beehive Tomb</Link></li>
-      <li><Link exact to="history/fact6">The church of Holy Transfiguration of Our Lord</Link></li>
-      <li><Link exact to="history/fact7">The church of the Birth of the Most Holy Virgin Mary</Link></li>
-      <li><Link exact to="history/fact8">The monastery of St. George The Victorious</Link></li>
-      <li><Link exact to="history/fact9">Vine growing and Wine producing</Link></li>
-      <li><Link exact to="history/fact10">Protected countryside nearby Pomorie</Link></li>
+      <li><Link exact to="/en/history/fact1">History</Link></li>
+      <li><Link exact to="/en/history/fact2">Pomorie Salt Lake</Link></li>
+      <li><Link exact to="/en/history/fact3">Pomorie Museum of Salt</Link></li>
+      <li><Link exact to="/en/history/fact4">History Museum</Link></li>
+      <li><Link exact to="/en/history/fact5">The Ancient Beehive Tomb</Link></li>
+      <li><Link exact to="/en/history/fact6">The church of Holy Transfiguration of Our Lord</Link></li>
+      <li><Link exact to="/en/history/fact7">The church of the Birth of the Most Holy Virgin Mary</Link></li>
+      <li><Link exact to="/en/history/fact8">The monastery of St. George The Victorious</Link></li>
+      <li><Link exact to="/en/history/fact9">Vine growing and Wine producing</Link></li>
+      <li><Link exact to="/en/history/fact10">Protected countryside nearby Pomorie</Link></li>
     </ul>
   </HistoryStyle>
 )

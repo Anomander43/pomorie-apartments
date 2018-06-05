@@ -189,27 +189,25 @@ const images = [
 
 const Classic = () => (
   <ApartmentsStyle>
-    <h2>Classic</h2>
+    <h2>Класик</h2>
 
     <ImageGallery items={images} />
 
-    <p>Apartment Classic is situated in the most attractive part in town Pomorie - in the Old town, it's only 50 m from the building of Municipality Pomorie and only 50 m from the beach. 
-
-    It's for 4 people, with two rooms, furnished kitchen, bathroom with WC and two balconies. The apartment has air conditioner, laundry, microwave oven, refrigerator, hot plates, iron, hair-dryer, TV with a satellite and free Wi-Fi.
+    <p>Апартамент "Класик" се намира в съседна кооперация, в която е находящ апартамент "Комфорт". Подходящ е за 4 човека, разполага с две стаи, оборудван кухненски бокс, баня с тоалетна и два балкона.
     </p>
 
     <ul className="available-items">
-        <li>air conditioner</li>
-        <li>laundry</li>
-        <li>microwave oven</li>
-        <li>refrigerator</li>
-        <li>hot plates</li>
-        <li>iron</li>
-        <li>hairdryer</li>
-        <li>TV with a cable tv</li>
-        <li>free Wi-Fi</li>
+        <li>климатик</li>
+        <li>пералня</li>
+        <li>микровълнова печка</li>
+        <li>хладилник</li>
+        <li>котлони</li>
+        <li>ютия</li>
+        <li>сешоар</li>
+        <li>телевизор с кабелна телевизия</li>
+        <li>безплатен Wi-Fi.</li>
     </ul>
-    <p className="baby-cot">On a request we can provide baby cot and baby high chair, subject to availability at the time.</p>
+    <p className="baby-cot">При запитване може да се осигури детска кошара и детско високо столче за хранене, при наличност към момента.</p>
   </ApartmentsStyle>
 )
 

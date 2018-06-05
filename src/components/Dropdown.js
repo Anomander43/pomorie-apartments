@@ -146,20 +146,20 @@ export default class Dropdown extends Component {
         <NavStyle>
             <Link activeClassName="active" className="" exact to="/">Home</Link>
             <div className="dropdown" onMouseEnter={this.toggleShow} onMouseLeave={this.toggleHide}>
-            <Link activeClassName="active" exact to="/apartments">Apartments</Link>
+            <Link activeClassName="active" exact to="/en/apartments">Apartments</Link>
                 <div className="dropdown-content">
                 <ul>
-                    <li><Link to="/classic">Classic</Link></li>
-                    <li><Link to="/comfort">Comfort</Link></li>
-                    <li><Link to="/coral">Coral</Link></li>
-                    <li><Link to="/marina">Marina</Link></li>
+                    <li><Link to="/en/classic">Classic</Link></li>
+                    <li><Link to="/en/comfort">Comfort</Link></li>
+                    <li><Link to="/en/coral">Coral</Link></li>
+                    <li><Link to="/en/marina">Marina</Link></li>
                 </ul>
                 </div>
             </div>
 
-            <Link activeClassName="active" exact to="prices">Prices</Link>
-            <Link activeClassName="active" exact to="history">History</Link>
-            <Link activeClassName="active" exact to="contacts">Contacts</Link>
+            <Link activeClassName="active" exact to="/en/prices">Prices</Link>
+            <Link activeClassName="active" exact to="/en/history">History</Link>
+            <Link activeClassName="active" exact to="/en/contacts">Contacts</Link>
         </NavStyle>
     )
   }

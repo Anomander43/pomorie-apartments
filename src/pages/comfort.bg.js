@@ -241,25 +241,25 @@ const images = [
 
 const Comfort = () => (
   <ApartmentsStyle>
-    <h2>Comfort</h2>
+    <h2>Комфорт</h2>
 
     <ImageGallery items={images} />
 
-    <p>Apartment Comfort is situated in the most attractive part of town Pomorie - in the Old town, it is only 50 m from the building of Municipality Pomorie and only 50 m from the beach. It is situated on the first floor in new co-operation with elevator. It’s a modern furnished apartment for 4-6 people with two rooms, furnished kitchen, bathroom with WC. The apartment has an air-conditioner in the dining room, laundry, microwave oven, refrigerator, cooker, hot water jug, iron, TVs in both rooms, two terraces and free Wi-Fi.
+    <p>Апартамент "Комфорт" се намира в най-атрактивната част на град Поморие - в Стария град, на 50м от сградата на Община Поморие и на 50м от плажа. Разположен е на 1-ви жилищен етаж в новопостроена кооперация с асансьор. Съвременно обзаведен апартамент за 4-6 човека с две стаи, оборудван кухненски бокс, баня с тоалетна и две тераси.
     </p>
 
     <ul className="available-items">
-        <li>air conditioner in the dining room</li>
-        <li>laundry</li>
-        <li>microwave oven</li>
-        <li>refrigerator</li>
-        <li>cooker</li>
-        <li>hot pot jug</li>
-        <li>iron</li>
-        <li>TV in each room</li>
-        <li>free Wi-Fi</li>
+        <li>климатик в хола</li>
+        <li>пералня</li>
+        <li>микровълнова печка</li>
+        <li>хладилник</li>
+        <li>печка с фурна</li>
+        <li>кана за гореща вода</li>
+        <li>ютия</li>
+        <li>телевизор във всяка стая</li>
+        <li>безплатен Wi-Fi.</li>
     </ul>
-    <p className="baby-cot">On a request we can provide baby cot and baby high chair, subject to availability at the time.</p>
+    <p className="baby-cot">При запитване може да се осигури детска кошара и детско високо столче за хранене, при наличност към момента.</p>
   </ApartmentsStyle>
 )
 

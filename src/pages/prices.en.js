@@ -222,7 +222,7 @@ const Prices = () => (
                         <td>34€</td>
                     </tr>
                     <tr>
-                        <td scope="row" rowSpan="4" className="rowHeading promo">Promo</td>
+                        <td scope="row" rowSpan="4" className="rowHeading promo">Promo!</td>
                         <td scope="row" className="rowHeading">08.06 - 13.06</td>
                         <td>26€</td>
                         <td></td>

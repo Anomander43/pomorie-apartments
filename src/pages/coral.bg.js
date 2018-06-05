@@ -237,27 +237,25 @@ const images = [
 
 const Coral = () => (
   <ApartmentsStyle>
-    <h2>Coral</h2>
+    <h2>Корал</h2>
 
     <ImageGallery items={images} />
 
-    <p>Apartment Coral is in new building with an elevator, in the newest part of Pomorie, called Russian neighborhood, in place of Salt Lake. It's only 100 m of the city center and 100 m from beautiful beaches.
-
-       It's for 5 people, has two rooms, furnished kitchen, bathroom with WC and two balconies. The apartment has air conditioner, laundry, microwave oven, hot plates, refrigerator, hot pot jug, iron, TV in both rooms and free Wi-Fi.
+    <p>Апартамент "Корал" е в новопостроена сграда с асансьор, в най-новата част на Поморие, т.нар. Руски квартал, на мястото на Соленото езеро. Само на 100метра от центъра на града и на 100метра от прекрасни плажове. Подходящ е за 5 човека, разполага с две стаи, оборудван кухненски бокс, баня с тоалетна и два балкона.
     </p>
 
     <ul className="available-items">
-        <li>air conditioner</li>
-        <li>laundry</li>
-        <li>microwave oven</li>
-        <li>refrigerator</li>
-        <li>hot plates</li>
-        <li>hot pot jug</li>
-        <li>iron</li>
-        <li>TV with a cable tv</li>
-        <li>free Wi-Fi</li>
+        <li>климатик</li>
+        <li>пералня</li>
+        <li>микровълнова печка</li>
+        <li>хладилник</li>
+        <li>котлони</li>
+        <li>кана за гореща вода</li>
+        <li>ютия</li>
+        <li>телевизор във всяка стая</li>
+        <li>безплатен Wi-Fi.</li>
     </ul>
-    <p className="baby-cot">On a request we can provide baby cot and baby high chair, subject to availability at the time.</p>
+    <p className="baby-cot">При запитване може да се осигури детска кошара и детско високо столче за хранене, при наличност към момента.</p>
   </ApartmentsStyle>
 )
 

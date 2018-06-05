@@ -42,23 +42,23 @@ const PriceStyle = styled.div`
           color: white;
           border-radius: 10px 10px 0 0;
 
-          &:not(:last-child) {
+          &:not(:first-child):not(:last-child) {
             border-right: 1px solid white;
           }
 
-          &:nth-child(2) {
+          &:nth-child(3) {
             background-color: #328B99;
           }
 
-          &:nth-child(3) {
+          &:nth-child(4) {
             background-color: #62823F;
           }
 
-          &:nth-child(4) {
+          &:nth-child(5) {
             background-color: #D2A001;
           }
 
-          &:nth-child(5) {
+          &:nth-child(6) {
             background-color: #BF6212;
           }
         }
@@ -90,8 +90,14 @@ const PriceStyle = styled.div`
           padding: 5px 15px;
           border-top: 1px solid #D8D8D8;
           border-bottom: 1px solid #D8D8D8;
+          text-align: center;
 
-          &:nth-child(n+2) {
+          &.rowHeading {
+            /* text-align: left; */
+            width: 150px;
+          }
+
+          &.normalHeading, &.promo {
             text-align: center;
           }
 
@@ -144,6 +150,7 @@ const Prices = () => (
                 <thead>
                     <tr>
                         <th></th>
+                        <th></th>
                         <th scope="col">Classic</th>
                         <th scope="col">Comfort</th>
                         <th scope="col">Coral</th>
@@ -152,90 +159,97 @@ const Prices = () => (
                 </thead>
                 <tbody>
                     <tr>
-                        <td scope="row">January</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">01.06 - 14.06</td>
+                        <td>26€</td>
+                        <td>26€</td>
+                        <td>28€</td>
+                        <td>36€</td>
                     </tr>
                     <tr>
-                        <td scope="row">February</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">15.06 - 28.06</td>
+                        <td>30€</td>
+                        <td>30€</td>
+                        <td>31€</td>
+                        <td>42€</td>
                     </tr>
                     <tr>
-                        <td scope="row">March</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">29.06 - 05.07</td>
+                        <td>36€</td>
+                        <td>34€</td>
+                        <td>36€</td>
+                        <td>48€</td>
                     </tr>
                     <tr>
-                        <td scope="row">April</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">06.07 - 12.07</td>
                         <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td>36€</td>
+                        <td>39€</td>
+                        <td>54€</td>
                     </tr>
                     <tr>
-                        <td scope="row">May</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">13.07 - 26.07</td>
+                        <td>42€</td>
                         <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td>43€</td>
+                        <td>63€</td>
                     </tr>
                     <tr>
-                        <td scope="row">June</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">27.07 - 18.08</td>
+                        <td>44€</td>
+                        <td>48€</td>
+                        <td>50€</td>
+                        <td>75€</td>
                     </tr>
                     <tr>
-                        <td scope="row">July</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">19.08 - 01.09</td>
+                        <td>32€</td>
+                        <td>36€</td>
+                        <td>39€</td>
+                        <td>46€</td>
                     </tr>
                     <tr>
-                        <td scope="row">August</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">02.09 - 08.09</td>
+                        <td>30€</td>
+                        <td>30€</td>
+                        <td>31€</td>
+                        <td>36€</td>
                     </tr>
                     <tr>
-                        <td scope="row">September</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" colSpan="2" className="rowHeading normalHeading">09.09 - 30.09</td>
+                        <td>26€</td>
+                        <td>26€</td>
+                        <td>28€</td>
+                        <td>34€</td>
                     </tr>
                     <tr>
-                        <td scope="row">October</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" rowSpan="4" className="rowHeading promo">Promo</td>
+                        <td scope="row" className="rowHeading">08.06 - 13.06</td>
+                        <td>26€</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td scope="row">November</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" className="rowHeading">10.07 - 13.07</td>
+                        <td>38€</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td scope="row">December</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
-                        <td>40€</td>
+                        <td scope="row" className="rowHeading">15.07 - 18.07</td>
+                        <td></td>
+                        <td></td>
+                        <td>41€</td>
+                        <td></td>
                     </tr>
-                    
+                    <tr>
+                        <td scope="row" className="rowHeading">27.08 - 01.09</td>
+                        <td></td>
+                        <td></td>
+                        <td>43€</td>
+                        <td></td>
+                    </tr>                    
                 </tbody>
             </table>
   </PriceStyle>

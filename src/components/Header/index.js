@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react'
 import Link from "gatsby-link";
 import styled from "styled-components";
 import logo from "../../images/logo_small.jpg";
@@ -63,23 +63,44 @@ const HeaderBlock = styled.div`
   background: #fff;
   padding: 97px 0 43px 0;
   border-top: 5px solid #bce623;
+  position: relative;
 
   ${media.ereader`
     padding: 20px 0;
   `}
 `
 
-const Header = (props) => (
-  <HeaderStyle>
-    <HeaderBlock>
-      <Link to="/"><img src={logo} className="logo" /></Link>
-      <h1 style={{ margin: 0 }} className="main-header">
-        <Link to="/">Pomorie Apartments</Link>
-      </h1>
-      <Dropdown />
-      <SelectLanguage langs={props.langs} />
-    </HeaderBlock>
-  </HeaderStyle>
-);
+export default class Header extends Component {
+  constructor(props) {
+      super(props);
+      this.onLanguageChange = this.onLanguageChange.bind(this);
+      this.state = {
+        currentLanguage: "bg"
+      };
+      
+      // this.languageChange = this.languageChange.bind(this)
+  }
 
-export default Header;
+  onLanguageChange(language) {
+    console.log(language);
+    this.setState({
+      currentLanguage: language
+    })
+  }
+
+  render() {
+    // console.log(currentLanguage);
+    return (
+      <HeaderStyle>
+        <HeaderBlock>
+          <Link to="/"><img src={logo} className="logo" /></Link>
+          <h1 style={{ margin: 0 }} className="main-header">
+            <Link to="/">Pomorie Apartments</Link>
+          </h1><SelectLanguage langs={this.props.langs} onLanguageChange={this.onLanguageChange} />
+          <Dropdown langs={this.props.langs} currentLanguage={this.state.currentLanguage} />
+          
+        </HeaderBlock>
+      </HeaderStyle>
+    )
+  }
+}

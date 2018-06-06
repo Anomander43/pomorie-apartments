@@ -39,12 +39,12 @@ const Description = styled.div`
 const ApartmentSmall = (props) => (
     <Description>
         <figure className="featured-thumbnail">
-            <Link exact to={props.apartmentName}>
+            <Link exact to={props.apartmentLink}>
                 <img src={props.thumbImg} />
             </Link>
         </figure>
         <h5>
-            <Link exact to={props.apartmentName}>
+            <Link exact to={props.apartmentLink}>
                 {props.apartmentName}
             </Link>
         </h5>

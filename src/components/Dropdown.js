@@ -121,8 +121,8 @@ const NavStyle = styled.nav`
 `
 
 export default class Dropdown extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     toggleShow = () => {
@@ -142,6 +142,29 @@ export default class Dropdown extends Component {
     }
 
   render() {
+    if (this.props.currentLanguage == 'bg') {
+        return (
+            <NavStyle>
+                <Link activeClassName="active" className="" exact to="/">Начало</Link>
+                <div className="dropdown" onMouseEnter={this.toggleShow} onMouseLeave={this.toggleHide}>
+                <Link activeClassName="active" exact to="/bg/apartments">Апартаменти</Link>
+                    <div className="dropdown-content">
+                    <ul>
+                        <li><Link to="/bg/classic">Класик</Link></li>
+                        <li><Link to="/bg/comfort">Комфорт</Link></li>
+                        <li><Link to="/bg/coral">Корал</Link></li>
+                        <li><Link to="/bg/marina">Марина</Link></li>
+                    </ul>
+                    </div>
+                </div>
+
+                <Link activeClassName="active" exact to="/bg/prices">Цени</Link>
+                <Link activeClassName="active" exact to="/bg/history">История</Link>
+                <Link activeClassName="active" exact to="/bg/contacts">Контакти</Link>
+            </NavStyle>
+        )
+    }
+
     return (
         <NavStyle>
             <Link activeClassName="active" className="" exact to="/">Home</Link>

@@ -1,35 +1,66 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import styled from "styled-components";
 // import { FormattedMessage } from 'react-intl';
 
-const SelectLanguage = (props) => {
-  const links = props.langs.map(lang =>
-    <Link to={lang.link} key={lang.langKey} style={{
-      color: 'black'
-    }}>
-      <li selected={lang.selected}>
-        {lang.langKey}
-      </li>
-    </Link>
-  );
+const LanguagesStyle = styled.section`
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  /* bottom: 0; */
 
-  return (
-    <section>
-      <header style={{
-        color: 'black'
-      }}>
-        {/* <FormattedMessage id="selectLanguage" /> */}
-      </header>
-      <ul>
-        {links}
-      </ul>
-    </section>
-  );
+  ul {
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+      margin: 5px;
+      padding: 0px 10px;
+    }
+
+    a {
+      &:not(:last-child) {
+        li {
+          border-right: 1px solid black;
+          /* &:after {
+            content: ' | '
+          } */
+        }
+      }
+    }
+  }
+`
+export default class SelectLanguage extends Component {
+  constructor(props) {
+    super(props);
+}
+
+  onChangeLanguage(e) {
+    console.log(e);
+      if(e.selected) {
+        this.props.onLanguageChange(e.langKey);
+      }
+  }
+
+  render() {
+    const links = this.props.langs.map(lang =>
+      <Link to={lang.link} key={lang.langKey} onClick={this.onChangeLanguage(lang)}>
+        <li selected={lang.selected}>
+          {lang.langKey}
+        </li>
+      </Link>
+    );
+
+    return (
+      <LanguagesStyle>
+        <ul>
+          {links}
+        </ul>
+      </LanguagesStyle>
+    );
+  }
 };
-
-SelectLanguage.propTypes = {
-  langs: PropTypes.array
-};
-
-export default SelectLanguage;

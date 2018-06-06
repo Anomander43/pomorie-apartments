@@ -42,10 +42,10 @@ const IndexPage = () => (
     </Carousel>
 
     <ApartmentDescriptionHolder>
-      <ApartmentSmall apartmentName="Класик" thumbImg={classicThumb} />
-      <ApartmentSmall apartmentName="Комфорт" thumbImg={comfortThumb} />
-      <ApartmentSmall apartmentName="Корал" thumbImg={coralThumb} />
-      <ApartmentSmall apartmentName="Марина" thumbImg={marinaThumb} />
+      <ApartmentSmall apartmentLink="/bg/classic" apartmentName="Класик" thumbImg={classicThumb} />
+      <ApartmentSmall apartmentLink="/bg/comfort" apartmentName="Комфорт" thumbImg={comfortThumb} />
+      <ApartmentSmall apartmentLink="/bg/coral" apartmentName="Корал" thumbImg={coralThumb} />
+      <ApartmentSmall apartmentLink="/bg/marina" apartmentName="Марина" thumbImg={marinaThumb} />
     </ApartmentDescriptionHolder>
   </MainContent>
 )

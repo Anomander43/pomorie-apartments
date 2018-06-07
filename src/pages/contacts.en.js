@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Link from "gatsby-link";
 import styled from "styled-components";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 

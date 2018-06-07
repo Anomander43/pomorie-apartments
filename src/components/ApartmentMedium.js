@@ -122,19 +122,19 @@ const Description = styled.div`
 const ApartmentMedium = (props) => (
     <Description>
         <h2>
-            <Link exact to={props.apartmentLink}>
+            <Link to={props.apartmentLink}>
                 {props.apartmentName}
             </Link>
         </h2>
         <figure>
-            <Link exact to={props.apartmentLink} className="featured-thumbnail">
+            <Link to={props.apartmentLink} className="featured-thumbnail">
                 <img src={props.thumbImg} />
             </Link>
         </figure>
         <p>
             {props.descriptionText}
         </p>
-        <Link exact to={props.apartmentLink} className="btn-info">Read More</Link>
+        <Link to={props.apartmentLink} className="btn-info">Read More</Link>
     </Description>
 );
 

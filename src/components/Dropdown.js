@@ -142,6 +142,7 @@ export default class Dropdown extends Component {
     }
 
   render() {
+      console.log(this.props.currentLanguage);
     if (this.props.currentLanguage == 'bg') {
         return (
             <NavStyle>

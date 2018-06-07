@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import styled from "styled-components";
-// import { FormattedMessage } from 'react-intl';
 
 const LanguagesStyle = styled.section`
   display: inline-block;
@@ -47,8 +45,9 @@ export default class SelectLanguage extends Component {
   }
 
   render() {
+    console.log(this.props.langs);
     const links = this.props.langs.map(lang =>
-      <Link to={lang.link} key={lang.langKey} onClick={this.onChangeLanguage(lang)}>
+      <Link to={lang.link} key={lang.langKey} onClick={this.onChangeLanguage.bind(this, lang)}>
         <li selected={lang.selected}>
           {lang.langKey}
         </li>

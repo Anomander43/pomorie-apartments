@@ -73,31 +73,32 @@ const HeaderBlock = styled.div`
 export default class Header extends Component {
   constructor(props) {
       super(props);
-      this.onLanguageChange = this.onLanguageChange.bind(this);
+      // this.onLanguageChange = this.onLanguageChange.bind(this);
       this.state = {
         currentLanguage: "bg"
       };
-      
-      // this.languageChange = this.languageChange.bind(this)
   }
 
   onLanguageChange(language) {
-    console.log(language);
+    console.log('тест1' + language);
     this.setState({
       currentLanguage: language
     })
   }
 
   render() {
-    // console.log(currentLanguage);
+    console.log(this.state.currentLanguage);
+    const currentLanguage = this.state.currentLanguage;
+    console.log(currentLanguage);
+
     return (
       <HeaderStyle>
         <HeaderBlock>
           <Link to="/"><img src={logo} className="logo" /></Link>
           <h1 style={{ margin: 0 }} className="main-header">
             <Link to="/">Pomorie Apartments</Link>
-          </h1><SelectLanguage langs={this.props.langs} onLanguageChange={this.onLanguageChange} />
-          <Dropdown langs={this.props.langs} currentLanguage={this.state.currentLanguage} />
+          </h1><SelectLanguage langs={this.props.langs} onLanguageChange={this.onLanguageChange.bind(this)} />
+          <Dropdown langs={this.props.langs} currentLanguage={currentLanguage} />
           
         </HeaderBlock>
       </HeaderStyle>

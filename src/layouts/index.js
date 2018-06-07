@@ -1,14 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 
 
-import Header from '../components/Header'
-import IndexPage from '../pages/index'
-import Footer from '../components/Footer'
+import Header from '../components/Header/index'
+import Footer from '../components/Footer/index'
 import './index.css'
 import icon32 from '../icon32.png'
 
